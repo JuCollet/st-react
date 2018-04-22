@@ -1,4 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css';
+import './styles/styles.less';
 
-ReactDOM.render(<h1>Hello React</h1>, document.getElementById('root'));
+import Home from './scenes/Home/Home';
+
+ReactDOM.render(<Home />, document.getElementById('root'));

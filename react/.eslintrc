@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "mocha": true,
+    "browser": true
+  },
+  "rules" : {
+    "jsx-a11y/anchor-is-valid" : "off",
+    "no-confusing-arrow": ["error", {
+      "allowParens": true
+    }],
+    "react/jsx-uses-vars": 2
+  },
+  "plugins": [
+    "react"
+  ]
+}
