@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -26,16 +26,16 @@ const config = {
       }, {
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "less-loader"
+          'css-loader',
+          'postcss-loader',
+          'less-loader',
         ],
-        test: /\.less$/,
+        test: /\.(less|css)$/,
       }, {
         test: /\.(png|jpeg|jpg|gif|svg)$/,
         use: [{
           loader: 'url-loader',
-          options: { limit: 20000, name: './img/[hash].[ext]'}
+          options: { limit: 20000, name: './img/[hash].[ext]' },
         },
         'image-webpack-loader',
         ],
@@ -47,15 +47,15 @@ const config = {
   },
   optimization: {
     splitChunks: {
-        cacheGroups: {
-            commons: { test: /[\\/]node_modules[\\/]/, name: "vendors", chunks: "all" }
-        }
-    }
+      cacheGroups: {
+        commons: { test: /[\\/]node_modules[\\/]/, name: 'vendors', chunks: 'all' },
+      },
+    },
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
     new HtmlWebpackPlugin({
       title: 'Supertime - React speed test',
