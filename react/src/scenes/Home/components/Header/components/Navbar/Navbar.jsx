@@ -4,10 +4,10 @@ import './styles/styles.less';
 const Navbar = () => (
   <nav className="nav">
     <ul>
-      <li>Link 1</li>
-      <li>Link 2</li>
-      <li>Link 3</li>
-      <li>Link 4</li>
+      <li>Particuliers</li>
+      <li>FAQ</li>
+      <li>Tarifs</li>
+      <li>Login</li>
     </ul>
   </nav>
 );
