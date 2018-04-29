@@ -5,8 +5,9 @@ import './styles/styles.less';
 const Button = props => (
   <button
     className={`
-      button 
-      ${props.white ? 'button-white' : ''}
+      btn
+      btn-${props.size}
+      btn-${props.color}
     `}
     onClick={props.clickHandler}
   >
@@ -17,12 +18,14 @@ const Button = props => (
 Button.propTypes = {
   clickHandler: PropTypes.func,
   title: PropTypes.string.isRequired,
-  white: PropTypes.bool,
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  color: PropTypes.oneOf(['blue', 'outline']),
 };
 
 Button.defaultProps = {
   clickHandler: a => a,
-  white: false,
+  size: 'md',
+  color: 'blue',
 };
 
 export default Button;

@@ -1,5 +1,61 @@
 import React from 'react';
 import './styles/styles.less';
+import feature1 from '../../../../../../img/feature1.svg';
+import feature2 from '../../../../../../img/feature2.svg';
+import feature3 from '../../../../../../img/feature3.svg';
+import feature4 from '../../../../../../img/feature4.svg';
+import Button from '../../../../../../components/Button/Button';
+
+
+const features = [
+  {
+    image: feature1,
+    alt: 'alt',
+    title: 'Statistiques',
+    title2: 'détaillées',
+    description: 'Lorem ipsum dolor amet try-hard coloring book street art VHS celiac locavore.',
+    link: 'link',
+    btn: 'En savoir plus',
+  },
+  {
+    image: feature2,
+    alt: 'alt',
+    title: 'Outils de',
+    title2: 'calcul avancés',
+    description: 'Lorem ipsum dolor amet try-hard coloring book street art VHS celiac locavore.',
+    link: 'link',
+    btn: 'En savoir plus',
+  },
+  {
+    image: feature3,
+    alt: 'alt',
+    title: 'Réception de',
+    title2: 'paiements',
+    description: 'Lorem ipsum dolor amet try-hard coloring book street art VHS celiac locavore.',
+    link: 'link',
+    btn: 'En savoir plus',
+  },
+  {
+    image: feature4,
+    alt: 'alt',
+    title: 'Sécurité à',
+    title2: 'toute épreuve',
+    description: 'Lorem ipsum dolor amet try-hard coloring book street art VHS celiac locavore.',
+    link: 'link',
+    btn: 'En savoir plus',
+  },
+];
+
+const featuresRender = () => (
+  features.map(feature => (
+    <li className="feature" key={feature.title}>
+      <img src={feature.image} alt={feature.alt} />
+      <span className="feature-title">{feature.title}<br />{feature.title2}</span>
+      <span className="feature-description">{feature.description}</span>
+      <Button title={feature.btn} color="outline" size="sm" />
+    </li>
+  ))
+);
 
 const Section2 = () => (
   <section className="section2">
@@ -14,7 +70,9 @@ const Section2 = () => (
       </article>
     </div>
     <div className="section-content">
-      <span>Contenu</span>
+      <ul className="features-list">
+        {featuresRender()}
+      </ul>
     </div>
   </section>
 );

@@ -1,0 +1,77 @@
+@darkblue: #546275;
+
+.app-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 115px 25px 25px 115px;
+  width: calc(100% - 140px);
+  min-height: calc(100% - 140px);
+  background-color: #F2F2F2;
+}
+
+.app-content-title {
+  width: 100%;
+  font-family: Heebo, sans-serif;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: @darkblue;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.card-title {
+  display: block;
+  margin-bottom: 15px;
+  font-family: Heebo, sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: @darkblue;
+}
+
+.card-link {
+  position: absolute;
+  font-family: Roboto, sans-serif;
+  font-size: .8em;
+  text-transform: uppercase;
+  right: 25px;
+  bottom: 25px;
+  color: #9E9E9E;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.card-link:after {
+  font-size: 1.2em;
+  content: ' >';
+}
+
+.card-link:hover {
+  color: #6E6E6E;
+}
+
+.card-sm {
+  width: 200px;
+  height: 250px;
+}
+
+.card-md {
+  width: 300px;
+  height: 250px;
+}
+
+.card-lg {
+  width: 400px;
+  height: 250px;
+}

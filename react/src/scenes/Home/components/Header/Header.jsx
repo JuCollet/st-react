@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import logo from '../../../../img/logo.svg';
 import './styles/styles.less';
 
 class Header extends PureComponent {
@@ -28,8 +30,10 @@ class Header extends PureComponent {
 
   render() {
     return (
-      <header className={`header ${this.state.userHasScrolled ? 'header-small' : ''}`}>
-        <span className="header-logo">Supertime</span>
+      <header className={`home-header ${this.state.userHasScrolled ? 'home-header-small' : ''}`}>
+        <Link to="/home">
+          <img src={logo} className="home-header-logo" alt="Welcome to supertime" />
+        </Link>
         <Navbar />
       </header>
     );
