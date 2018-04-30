@@ -6,7 +6,7 @@ import YearlyEvolution from './cards/YearlyEvolution';
 import ExpensesList from './cards/ExpensesList/ExpensesList';
 
 const Statistics = () => (
-  <div className="app-content views-stats">
+  <div className="app-content">
     <span className="app-content-title">Statistiques</span>
     <MonthlyRevenues />
     <YearlyExpenses />
