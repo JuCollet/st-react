@@ -3,7 +3,7 @@ import '../styles/styles.less';
 
 const Keep = () => (
   <div className="app-content views-stats">
-    <h2>Keep</h2>
+    <span className="app-content-title">Coffre fort</span>
   </div>
 );
 

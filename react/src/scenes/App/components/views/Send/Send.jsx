@@ -3,7 +3,7 @@ import '../styles/styles.less';
 
 const Send = () => (
   <div className="app-content views-stats">
-    <h2>Send</h2>
+    <span className="app-content-title">Envoyer de l&apos;argent</span>
   </div>
 );
 

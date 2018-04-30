@@ -4,9 +4,9 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  padding: 115px 25px 25px 115px;
-  width: calc(100% - 140px);
-  min-height: calc(100% - 140px);
+  padding: 90px 15px 15px 100px;
+  width: calc(100% - 115px);
+  min-height: calc(100% - 105px);
   background-color: #F2F2F2;
 }
 
@@ -24,11 +24,17 @@
   overflow: hidden;
   flex-shrink: 0;
   padding: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
+  margin-right: 15px;
+  margin-bottom: 15px;
   background: #FFFFFF;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
@@ -43,18 +49,13 @@
 .card-link {
   position: absolute;
   font-family: Roboto, sans-serif;
-  font-size: .8em;
+  font-size: .7em;
   text-transform: uppercase;
   right: 25px;
-  bottom: 25px;
+  bottom: 15px;
   color: #9E9E9E;
   cursor: pointer;
   transition: .2s;
-}
-
-.card-link:after {
-  font-size: 1.2em;
-  content: ' >';
 }
 
 .card-link:hover {

@@ -276,7 +276,7 @@ p {
   align-items: center;
   z-index: 999999;
   width: 100%;
-  height: 75px;
+  height: 60px;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: .2s;
@@ -288,8 +288,8 @@ p {
 
 .app-sidebar {
   position: fixed;
-  padding-top: 75px;
-  width: 75px;
+  padding-top: 60px;
+  width: 60px;
   height: 100%;
   background: linear-gradient(167.4deg, #56CCF2 -17.77%, #3799B9 144.65%);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
@@ -323,9 +323,9 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  padding: 115px 25px 25px 115px;
-  width: calc(100% - 140px);
-  min-height: calc(100% - 140px);
+  padding: 90px 15px 15px 100px;
+  width: calc(100% - 115px);
+  min-height: calc(100% - 105px);
   background-color: #F2F2F2;
 }
 .app-content-title {
@@ -341,11 +341,16 @@ p {
   overflow: hidden;
   flex-shrink: 0;
   padding: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
+  margin-right: 15px;
+  margin-bottom: 15px;
   background: #FFFFFF;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  transition: .2s;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.1);
 }
 .card-title {
   display: block;
@@ -358,17 +363,13 @@ p {
 .card-link {
   position: absolute;
   font-family: Roboto, sans-serif;
-  font-size: .8em;
+  font-size: .7em;
   text-transform: uppercase;
   right: 25px;
-  bottom: 25px;
+  bottom: 15px;
   color: #9E9E9E;
   cursor: pointer;
   transition: .2s;
-}
-.card-link:after {
-  font-size: 1.2em;
-  content: ' >';
 }
 .card-link:hover {
   color: #6E6E6E;
@@ -384,5 +385,47 @@ p {
 .card-lg {
   width: 400px;
   height: 250px;
+}
+
+.expenseslist-wrapper {
+  position: absolute;
+  padding-right: 17px;
+  left: 0px;
+  right: 0px;
+  top: 60px;
+  bottom: 45px;
+  width: calc(100% + 17px);
+  overflow-y: scroll;
+}
+.expenseslist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: Roboto, sans-serif;
+  color: #546275;
+}
+.expenseslist-el {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px 10px 25px;
+  background-color: #FEFEFE;
+}
+.expenseslist-el-odd {
+  background-color: #F2F2F2;
+}
+.expenseslist-el-userId {
+  display: inline-block;
+  width: 5%;
+  margin-right: 5%;
+}
+.expenseslist-el-description {
+  display: inline-block;
+  width: 65%;
+  margin-right: 5%;
+}
+.expenseslist-el-price {
+  display: inline-block;
+  width: 20%;
+  font-weight: bold;
 }
 
