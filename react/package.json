@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && webpack --progress --mode=production",
+    "build": "npm run clean && webpack --progress --mode=production -p && npm run critical",
+    "critical": "node critical",
     "clean": "rimraf dist",
     "start:dev": "webpack-dev-server"
   },
@@ -15,6 +16,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "chart.js": "1.1.1",
+    "critical": "^1.2.2",
     "express": "^4.16.3",
     "normalize.css": "^8.0.0",
     "path": "^0.12.7",
